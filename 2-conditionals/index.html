@@ -26,18 +26,21 @@
           A. El párrafo muestra la cantidad de stickers seleccionados
           B. El párrafo muestra que lleva demasiados stickers en caso de que la cantidad sea mayor que 10.  -->
         <h2>Stickers</h2>
-        <div>
-          <img src="./assets/img/sticker-1.webp" alt="" height="200" />
-          <input type="number" min="0" pattern="[0-9]{1,2}" />
+        <div class="stickers-items">
+          <div class="sticker-card">
+            <img src="./assets/img/sticker-1.webp" alt="" height="200" />
+            <input type="number" min="0" pattern="[0-9]{1,2}" />
+          </div>
+          <div class="sticker-card">
+            <img src="./assets/img/sticker-2.webp" alt="" height="200" />
+            <input type="number" min="0" />
+          </div>
+          <div class="sticker-card">
+            <img src="./assets/img/sticker-3.webp" alt="" height="200" />
+            <input type="number" min="0" />
+          </div>
         </div>
-        <div>
-          <img src="./assets/img/sticker-2.webp" alt="" height="200" />
-          <input type="number" min="0" />
-        </div>
-        <div>
-          <img src="./assets/img/sticker-3.webp" alt="" height="200" />
-          <input type="number" min="0" />
-        </div>
+
         <p id="sticker-status-paragraph"></p>
         <button id="check-button">Check</button>
       </section>
@@ -47,39 +50,41 @@
          B. Adicionalmente se muestra correctamente el párrafo "password 2 correcto" al ingresar el password 714 utilizando los select y luego presionando botón con el texto ingresar. 
          C. Se muestra password incorrecto al seleccionar cualquier otro password  -->
         <h2>Password</h2>
-        <select id="password-1">
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
-          <option value="7">7</option>
-          <option value="8">8</option>
-          <option value="9">9</option>
-        </select>
-        <select id="password-2">
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
-          <option value="7">7</option>
-          <option value="8">8</option>
-          <option value="9">9</option>
-        </select>
-        <select id="password-3">
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
-          <option value="7">7</option>
-          <option value="8">8</option>
-          <option value="9">9</option>
-        </select>
+        <div>
+          <select id="password-1">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+          </select>
+          <select id="password-2">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+          </select>
+          <select id="password-3">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+          </select>
+        </div>
         <button id="password-button">Log In</button>
         <p id="password-check-paragraph"></p>
       </section>

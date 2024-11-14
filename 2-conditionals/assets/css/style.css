@@ -1,6 +1,35 @@
+h1 {
+  text-align: center;
+  margin: 0;
+  padding: 1rem;
+  background-color: #f1f1f1;
+}
+
+section {
+  text-align: center;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
 .bordered {
   border: 2px solid red;
 }
 #oli-picture {
   cursor: pointer;
+}
+.stickers-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.sticker-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
