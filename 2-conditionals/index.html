@@ -27,7 +27,7 @@
           B. El párrafo muestra que lleva demasiados stickers en caso de que la cantidad sea mayor que 10.  -->
         <div>
           <img src="./assets/img/sticker-1.webp" alt="" height="200" />
-          <input type="number" min="0" />
+          <input type="number" min="0" pattern="[0-9]{1,2}" />
         </div>
         <div>
           <img src="./assets/img/sticker-2.webp" alt="" height="200" />
@@ -38,7 +38,7 @@
           <input type="number" min="0" />
         </div>
         <p id="sticker-status-paragraph"></p>
-        <button>Check</button>
+        <button id="check-button">Check</button>
       </section>
       <section id="password-section">
         <!-- Se debe construir una página con 3 select y opciones con dígitos del 1 al 9, al hacer click a la opción ingresar se debe verificar que el password sea 911 y en ese caso mostrar debajo del botón ingresar, un párrafo con el contenido "password 1 correcto", en caso de que el password sea 714 se debe mostrar en el párrafo "password 2 es correcto", si ingresa otro valor se debe mostrar "password incorrecto". 
