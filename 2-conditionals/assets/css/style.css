@@ -1,7 +1,6 @@
-main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #f8f9fa;
+.bordered {
+  border: 2px solid red;
+}
+#oli-picture {
+  cursor: pointer;
 }
