@@ -1,5 +1,5 @@
-console.log('main.js loaded');
 // 1 - Toggle Class
+
 // Get the picture element by id
 const oliPicture = document.getElementById('oli-picture');
 
@@ -9,6 +9,7 @@ oliPicture.addEventListener('click', function () {
 });
 
 // 2 - Stickers
+
 // Get all stickers input element by id
 const stickers = document.querySelectorAll('#stickers-section input');
 
@@ -34,5 +35,35 @@ checkButton.addEventListener('click', function () {
     checkMessage.textContent = `You have ${sum} stickers.`;
   } else {
     checkMessage.textContent = 'You have too many stickers!';
+  }
+});
+
+// 3 - Password
+
+// Get the password input element by id
+const password = document.querySelectorAll('#password-section select');
+
+// Get the values of the password input elements
+function getPassword() {
+  let passwordString = '';
+  password.forEach(function (input) {
+    passwordString += input.value;
+  });
+  return passwordString;
+}
+
+// Get the password message element by id
+const passwordMessage = document.getElementById('password-check-paragraph');
+
+// Get the check password button element by id
+const checkPasswordButton = document.getElementById('password-button');
+
+// Add a click event listener to the check password button element that checks if the password is equal to '714'
+checkPasswordButton.addEventListener('click', function () {
+  const passwordString = getPassword();
+  if (passwordString === '714') {
+    passwordMessage.textContent = 'Correct password!';
+  } else {
+    passwordMessage.textContent = 'Incorrect password!';
   }
 });
