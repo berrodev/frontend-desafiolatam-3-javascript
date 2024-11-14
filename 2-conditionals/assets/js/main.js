@@ -69,8 +69,10 @@ const checkPasswordButton = document.getElementById('password-button');
 // Add a click event listener to the check password button element that checks if the password is equal to '714'
 checkPasswordButton.addEventListener('click', function () {
   const passwordString = getPassword();
-  if (passwordString === '714') {
-    passwordMessage.textContent = 'Correct password!';
+  if (passwordString === '911') {
+    passwordMessage.textContent = 'Correct password 1!';
+  } else if (passwordString === '714') {
+    passwordMessage.textContent = 'Correct password 2!';
   } else {
     passwordMessage.textContent = 'Incorrect password!';
   }
