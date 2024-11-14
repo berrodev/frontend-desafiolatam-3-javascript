@@ -23,6 +23,14 @@ const checkMessage = document.getElementById('sticker-status-paragraph');
 function getSum() {
   let sum = 0;
   stickers.forEach(function (sticker) {
+    // Check if the sticker value is empty, not a number or less than 0
+    if (
+      sticker.value === '' ||
+      isNaN(sticker.value) ||
+      parseInt(sticker.value) < 0
+    ) {
+      sticker.value = 0;
+    }
     sum += parseInt(sticker.value);
   });
   return sum;
