@@ -18,11 +18,11 @@ document.addEventListener('keydown', function (event) {
   }
   // Crear nuevos divs con colores específicos
   else if (key === 'q') {
-    crearDiv('purple'); // Morado
+    crearDiv('purple');
   } else if (key === 'w') {
-    crearDiv('gray'); // Gris
+    crearDiv('gray');
   } else if (key === 'e') {
-    crearDiv('brown'); // Café
+    crearDiv('brown');
   }
 });
 
