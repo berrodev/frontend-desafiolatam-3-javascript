@@ -3,17 +3,17 @@ let colorSeleccionado = '';
 
 // Manejador del evento keydown
 document.addEventListener('keydown', function (event) {
-  const key = event.key.toLowerCase(); // Convertir la tecla a minúsculas
+  const key = event.key;
 
   // Mapeo de teclas a colores
   if (key === 'a') {
-    colorSeleccionado = 'pink'; // Rosado
+    colorSeleccionado = 'pink';
     document.getElementById('key').style.backgroundColor = colorSeleccionado;
   } else if (key === 's') {
-    colorSeleccionado = 'orange'; // Naranjo
+    colorSeleccionado = 'orange';
     document.getElementById('key').style.backgroundColor = colorSeleccionado;
   } else if (key === 'd') {
-    colorSeleccionado = 'skyblue'; // Celeste
+    colorSeleccionado = 'skyblue';
     document.getElementById('key').style.backgroundColor = colorSeleccionado;
   }
   // Crear nuevos divs con colores específicos
