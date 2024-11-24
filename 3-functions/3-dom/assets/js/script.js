@@ -2,7 +2,7 @@
 function pintar(ele, color = 'green') {
   ele.style.backgroundColor = color;
 }
-// obtener el elemento
+// Obtener el elemento
 const ele = document.getElementById('ele1');
-// añadir el evento al elemento
+// Añadir el evento al elemento
 ele.addEventListener('click', () => pintar(ele, 'yellow'));

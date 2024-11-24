@@ -5,7 +5,7 @@ let colorSeleccionado = '';
 document.addEventListener('keydown', function (event) {
   const key = event.key;
 
-  // Mapeo de teclas a colores
+  // Teclas a colores
   if (key === 'a') {
     colorSeleccionado = 'pink';
     document.getElementById('key').style.backgroundColor = colorSeleccionado;
