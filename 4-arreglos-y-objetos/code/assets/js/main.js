@@ -100,8 +100,8 @@ const lastThreeEstatesForSale = saleEstates.slice(-3);
 // Arreglo con las ultimas 3 propiedades en alquiler
 const lastThreeEstatesForRent = rentalEstates.slice(-3);
 
-// funcion para iterar un array de propiedades para añadirlas al html y que acepte la cantidad de propiedades a mostrar
-function addEstatesToHtml(estates, container, amount) {
+// funcion para iterar un array de propiedades para añadirlas al html y que acepte la cantidad de propiedades a mostrar. Si no se pasa la cantidad, se muestran todas las propiedades
+function addEstatesToHtml(estates, container, amount = estates.length) {
   for (const {
     title,
     src,
