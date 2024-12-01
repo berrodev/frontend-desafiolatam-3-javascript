@@ -141,7 +141,7 @@ function addEstatesToHtml(estates, container, amount = estates.length) {
                     }
                   </p>
                   <p class="${pets ? 'text-success' : 'text-danger'}">
-                    <i class="fas fa-paw"></i> ${
+                    <i class="fas fa-ban"></i> ${
                       pets ? 'Mascotas permitidas' : 'No se permiten mascotas'
                     }
                   </p>
