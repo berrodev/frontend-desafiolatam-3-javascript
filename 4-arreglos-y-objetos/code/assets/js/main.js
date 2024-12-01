@@ -100,7 +100,8 @@ const lastThreeEstatesForSale = saleEstates.slice(-3);
 // Arreglo con las ultimas 3 propiedades en alquiler
 const lastThreeEstatesForRent = rentalEstates.slice(-3);
 
-// funcion para iterar un array de propiedades para añadirlas al html y que acepte la cantidad de propiedades a mostrar. Si no se pasa la cantidad, se muestran todas las propiedades
+// Función para iterar un array de propiedades para añadirlas al html y que acepte la cantidad de propiedades a mostrar. Si no se pasa la cantidad, se muestran todas las propiedades
+
 function addEstatesToHtml(estates, container, amount = estates.length) {
   for (const {
     title,
@@ -158,7 +159,8 @@ homeSaleEstatesContainer &&
 homeRentalEstatesContainer &&
   addEstatesToHtml(rentalEstates, homeRentalEstatesContainer, 3);
 
-// PÁGINA PROPIEDADES EN VENTA
+// PÁGINA PROPIEDADES EN VENTA ----------------------------------------------
+
 // Se obtienen los elementos del DOM
 const ventaSaleEstatesContainer = document.getElementById(
   'propiedades-venta-container-all'
@@ -166,3 +168,12 @@ const ventaSaleEstatesContainer = document.getElementById(
 // Se añaden todas las propiedades en venta al html de la pagina de propiedades en venta si existe el contenedor
 ventaSaleEstatesContainer &&
   addEstatesToHtml(saleEstates, ventaSaleEstatesContainer);
+
+// PÁGINA PROPIEDADES EN ALQUILER ----------------------------------------------
+// Se obtienen los elementos del DOM
+const alquilerRentalEstatesContainer = document.getElementById(
+  'propiedades-alquiler-container-all'
+);
+// Se añaden todas las propiedades en alquiler al html de la pagina de propiedades en alquiler si existe el contenedor
+alquilerRentalEstatesContainer &&
+  addEstatesToHtml(rentalEstates, alquilerRentalEstatesContainer);
