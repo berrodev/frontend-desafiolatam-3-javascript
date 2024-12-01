@@ -2,7 +2,7 @@
 const rentalEstates = [
   {
     title: 'Departamento en Las Condes',
-    src: '../img/estates/las-condes-depto.webp',
+    src: './assets/img/estates/las-condes-depto.webp',
     description: 'Hermoso departamento amoblado en el centro de Las Condes.',
     location: 'Las Condes, Santiago',
     rooms: 2,
