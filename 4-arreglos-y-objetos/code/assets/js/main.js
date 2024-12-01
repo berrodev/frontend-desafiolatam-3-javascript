@@ -100,66 +100,115 @@ const lastThreeEstatesForSale = saleEstates.slice(-3);
 // Arreglo con las ultimas 3 propiedades en alquiler
 const lastThreeEstatesForRent = rentalEstates.slice(-3);
 
-// Se itera el array con las propiedades en venta para añadirlas al html
-for (const {
-  title,
-  src,
-  description,
-  location,
-  rooms,
-  price,
-  smoke,
-  pets,
-} of lastThreeEstatesForSale) {
-  saleEstatesContainer.innerHTML += `
-          <div class="col-md-4 mb-4">
-              <div class="card">
-                <img
-                  src="${src}"
-                  class="card-img-top"
-                  alt="Imagen de la propiedad"
-                />
-                <div class="card-body">
-                  <h5 class="card-title">
-                    ${title}
-                  </h5>
-                  <p class="card-text">
-                    ${description}
-                  </p>
-                  <p>
-                    <i class="fas fa-map-marker-alt"></i> ${location}
-                  </p>
-                  <p>
-                    <i class="fas fa-bed"></i> ${rooms} Habitaciones
-                  </p>
-                  <p><i class="fas fa-dollar-sign"></i> ${price.toLocaleString()}</p>
-                  <p class="${smoke ? 'text-danger' : 'text-success'}">
-                    <i class="fas fa-smoking-ban"></i> ${
-                      smoke ? 'Se permite fumar' : 'No se permite fumar'
-                    }
-                  </p>
-                  <p class="${pets ? 'text-success' : 'text-danger'}">
-                    <i class="fas fa-paw"></i> ${
-                      pets ? 'Mascotas permitidas' : 'No se permiten mascotas'
-                    }
-                  </p>
-                </div>
-              </div>
-            </div>`;
-}
+// // Se itera el array con las propiedades en venta para añadirlas al html
+// for (const {
+//   title,
+//   src,
+//   description,
+//   location,
+//   rooms,
+//   price,
+//   smoke,
+//   pets,
+// } of lastThreeEstatesForSale) {
+//   saleEstatesContainer.innerHTML += `
+//           <div class="col-md-4 mb-4">
+//               <div class="card">
+//                 <img
+//                   src="${src}"
+//                   class="card-img-top"
+//                   alt="Imagen de la propiedad"
+//                 />
+//                 <div class="card-body">
+//                   <h5 class="card-title">
+//                     ${title}
+//                   </h5>
+//                   <p class="card-text">
+//                     ${description}
+//                   </p>
+//                   <p>
+//                     <i class="fas fa-map-marker-alt"></i> ${location}
+//                   </p>
+//                   <p>
+//                     <i class="fas fa-bed"></i> ${rooms} Habitaciones
+//                   </p>
+//                   <p><i class="fas fa-dollar-sign"></i> ${price.toLocaleString()}</p>
+//                   <p class="${smoke ? 'text-danger' : 'text-success'}">
+//                     <i class="fas fa-smoking-ban"></i> ${
+//                       smoke ? 'Se permite fumar' : 'No se permite fumar'
+//                     }
+//                   </p>
+//                   <p class="${pets ? 'text-success' : 'text-danger'}">
+//                     <i class="fas fa-paw"></i> ${
+//                       pets ? 'Mascotas permitidas' : 'No se permiten mascotas'
+//                     }
+//                   </p>
+//                 </div>
+//               </div>
+//             </div>`;
+// }
 
 // Se itera el array con las propiedades en alquiler para añadirlas al html
-for (const {
-  title,
-  src,
-  description,
-  location,
-  rooms,
-  price,
-  smoke,
-  pets,
-} of lastThreeEstatesForRent) {
-  rentalEstatesContainer.innerHTML += `
+// for (const {
+//   title,
+//   src,
+//   description,
+//   location,
+//   rooms,
+//   price,
+//   smoke,
+//   pets,
+// } of lastThreeEstatesForRent) {
+//   rentalEstatesContainer.innerHTML += `
+//           <div class="col-md-4 mb-4">
+//               <div class="card">
+//                 <img
+//                   src="${src}"
+//                   class="card-img-top"
+//                   alt="Imagen de la propiedad"
+//                 />
+//                 <div class="card-body">
+//                   <h5 class="card-title">
+//                     ${title}
+//                   </h5>
+//                   <p class="card-text">
+//                     ${description}
+//                   </p>
+//                   <p>
+//                     <i class="fas fa-map-marker-alt"></i> ${location}
+//                   </p>
+//                   <p>
+//                     <i class="fas fa-bed"></i> ${rooms} Habitaciones
+//                   </p>
+//                   <p><i class="fas fa-dollar-sign"></i> ${price.toLocaleString()}</p>
+//                   <p class="${smoke ? 'text-danger' : 'text-success'}">
+//                     <i class="fas fa-smoking-ban"></i> ${
+//                       smoke ? 'Se permite fumar' : 'No se permite fumar'
+//                     }
+//                   </p>
+//                   <p class="${pets ? 'text-success' : 'text-danger'}">
+//                     <i class="fas fa-paw"></i> ${
+//                       pets ? 'Mascotas permitidas' : 'No se permiten mascotas'
+//                     }
+//                   </p>
+//                 </div>
+//               </div>
+//             </div>`;
+// }
+
+// funcion para iterar un array de propiedades para añadirlas al html y que acepte la cantidad de propiedades a mostrar
+function addEstatesToHtml(estates, container, amount) {
+  for (const {
+    title,
+    src,
+    description,
+    location,
+    rooms,
+    price,
+    smoke,
+    pets,
+  } of estates.slice(-amount)) {
+    container.innerHTML += `
           <div class="col-md-4 mb-4">
               <div class="card">
                 <img
@@ -194,4 +243,8 @@ for (const {
                 </div>
               </div>
             </div>`;
+  }
 }
+
+// Se añaden las ultimas 3 propiedades en arriendo al html
+addEstatesToHtml(rentalEstates, rentalEstatesContainer, 3);
