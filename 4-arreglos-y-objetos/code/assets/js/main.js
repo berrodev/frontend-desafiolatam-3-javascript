@@ -160,7 +160,6 @@ homeRentalEstatesContainer &&
   addEstatesToHtml(rentalEstates, homeRentalEstatesContainer, 3);
 
 // PÁGINA PROPIEDADES EN VENTA ----------------------------------------------
-
 // Se obtienen los elementos del DOM
 const ventaSaleEstatesContainer = document.getElementById(
   'propiedades-venta-container-all'
