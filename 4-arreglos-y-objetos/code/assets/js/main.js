@@ -246,5 +246,8 @@ function addEstatesToHtml(estates, container, amount) {
   }
 }
 
+// Se añaden las ultimas 3 propiedades en venta al html
+addEstatesToHtml(saleEstates, saleEstatesContainer, 3);
+
 // Se añaden las ultimas 3 propiedades en arriendo al html
 addEstatesToHtml(rentalEstates, rentalEstatesContainer, 3);
