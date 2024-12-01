@@ -86,3 +86,84 @@ const propiedades_venta = [
     pets: false,
   },
 ];
+
+const homeAlquilerContainer = document.getElementById(
+  'propiedades-alquiler-container'
+);
+const homeVentaContainer = document.getElementById(
+  'propiedades-venta-container'
+);
+
+// Array con las ultimas 3 propiedades en venta
+const ultimas3PropiedadesVenta = propiedades_venta.slice(-3);
+
+for (propiedad of ultimas3PropiedadesVenta) {
+  homeVentaContainer.innerHTML += `
+        <div class="col-md-4 mb-4">
+            <div class="card">
+              <img
+                src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YXBhcnRtZW50fGVufDB8MHwwfHx8MA%3D%3D&auto=format&fit=crop&w=700&q=60"
+                class="card-img-top"
+                alt="Imagen del departamento"
+              />
+              <div class="card-body">
+                <h5 class="card-title">
+                  Apartamento en el centro de la ciudad
+                </h5>
+                <p class="card-text">
+                  Este apartamento de 2 habitaciones está ubicado en el corazón
+                  de la ciudad, cerca de todo.
+                </p>
+                <p>
+                  <i class="fas fa-map-marker-alt"></i> 123 Main Street,
+                  Anytown, CA 91234
+                </p>
+                <p>
+                  <i class="fas fa-bed"></i> 2 Habitaciones |
+                  <i class="fas fa-bath"></i> 2 Baños
+                </p>
+                <p><i class="fas fa-dollar-sign"></i> 2.000</p>
+                <p class="text-danger">
+                  <i class="fas fa-smoking-ban"></i> No se permite fumar
+                </p>
+                <p class="text-success">
+                  <i class="fas fa-paw"></i> Mascotas permitidas
+                </p>
+              </div>
+            </div>
+          </div>`;
+}
+// homeAlquilerContainer.innerHTML = `
+//         <div class="col-md-4 mb-4">
+//             <div class="card">
+//               <img
+//                 src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YXBhcnRtZW50fGVufDB8MHwwfHx8MA%3D%3D&auto=format&fit=crop&w=700&q=60"
+//                 class="card-img-top"
+//                 alt="Imagen del departamento"
+//               />
+//               <div class="card-body">
+//                 <h5 class="card-title">
+//                   Apartamento en el centro de la ciudad
+//                 </h5>
+//                 <p class="card-text">
+//                   Este apartamento de 2 habitaciones está ubicado en el corazón
+//                   de la ciudad, cerca de todo.
+//                 </p>
+//                 <p>
+//                   <i class="fas fa-map-marker-alt"></i> 123 Main Street,
+//                   Anytown, CA 91234
+//                 </p>
+//                 <p>
+//                   <i class="fas fa-bed"></i> 2 Habitaciones |
+//                   <i class="fas fa-bath"></i> 2 Baños
+//                 </p>
+//                 <p><i class="fas fa-dollar-sign"></i> 2.000</p>
+//                 <p class="text-danger">
+//                   <i class="fas fa-smoking-ban"></i> No se permite fumar
+//                 </p>
+//                 <p class="text-success">
+//                   <i class="fas fa-paw"></i> Mascotas permitidas
+//                 </p>
+//               </div>
+//             </div>
+//           </div>`;
