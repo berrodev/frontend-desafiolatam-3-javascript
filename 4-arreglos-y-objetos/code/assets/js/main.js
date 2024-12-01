@@ -2,7 +2,7 @@
 const rentalEstates = [
   {
     title: 'Departamento en Las Condes',
-    src: 'https://example.com/las-condes-alquiler.jpg',
+    src: '../img/estates/las-condes-depto.webp',
     description: 'Hermoso departamento amoblado en el centro de Las Condes.',
     location: 'Las Condes, Santiago',
     rooms: 2,
@@ -12,7 +12,7 @@ const rentalEstates = [
   },
   {
     title: 'Casa en Viña del Mar',
-    src: 'https://example.com/vina-casa-alquiler.jpg',
+    src: './assets/img/estates/vina-casa.webp',
     description: 'Casa amplia con jardín a pocos minutos de la playa.',
     location: 'Viña del Mar, Valparaíso',
     rooms: 3,
@@ -22,7 +22,7 @@ const rentalEstates = [
   },
   {
     title: 'Loft en Providencia',
-    src: 'https://example.com/providencia-loft-alquiler.jpg',
+    src: './assets/img/estates/providencia-loft.webp',
     description: 'Moderno loft ideal para profesionales.',
     location: 'Providencia, Santiago',
     rooms: 1,
@@ -32,7 +32,7 @@ const rentalEstates = [
   },
   {
     title: 'Cabaña en Puerto Varas',
-    src: 'https://example.com/puerto-varas-cabana.jpg',
+    src: './assets/img/estates/puerto-varas-cabana.webp',
     description: 'Acogedora cabaña con vistas al lago Llanquihue.',
     location: 'Puerto Varas, Los Lagos',
     rooms: 2,
@@ -46,7 +46,7 @@ const rentalEstates = [
 const saleEstates = [
   {
     title: 'Departamento en Santiago Centro',
-    src: 'https://example.com/santiago-centro-venta.jpg',
+    src: './assets/img/estates/santiago-depto.webp',
     description: 'Departamento nuevo cerca del metro y servicios.',
     location: 'Santiago Centro, Santiago',
     rooms: 2,
@@ -56,7 +56,7 @@ const saleEstates = [
   },
   {
     title: 'Casa en La Serena',
-    src: 'https://example.com/la-serena-casa-venta.jpg',
+    src: './assets/img/estates/la-serena.webp',
     description: 'Casa familiar con patio y estacionamiento.',
     location: 'La Serena, Coquimbo',
     rooms: 4,
@@ -66,7 +66,7 @@ const saleEstates = [
   },
   {
     title: 'Parcela en Curicó',
-    src: 'https://example.com/curico-parcela-venta.jpg',
+    src: './assets/img/estates/curico-parcela.webp',
     description: 'Parcela con 5000 m² de terreno y casa estilo rústico.',
     location: 'Curicó, Maule',
     rooms: 3,
@@ -76,7 +76,7 @@ const saleEstates = [
   },
   {
     title: 'Penthouse en Vitacura',
-    src: 'https://example.com/vitacura-penthouse-venta.jpg',
+    src: './assets/img/estates/vitacura-penthouse.webp',
     description: 'Penthouse de lujo con vistas panorámicas.',
     location: 'Vitacura, Santiago',
     rooms: 3,
