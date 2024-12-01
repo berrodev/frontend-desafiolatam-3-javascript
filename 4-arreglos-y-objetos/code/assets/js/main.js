@@ -87,10 +87,10 @@ const saleEstates = [
 ];
 
 // Se obtienen los elementos del DOM
-const rentalEstatesContainer = document.getElementById(
+const homeRentalEstatesContainer = document.getElementById(
   'propiedades-alquiler-container'
 );
-const saleEstatesContainer = document.getElementById(
+const homeSaleEstatesContainer = document.getElementById(
   'propiedades-venta-container'
 );
 
@@ -150,8 +150,18 @@ function addEstatesToHtml(estates, container, amount = estates.length) {
   }
 }
 
-// Se añaden las ultimas 3 propiedades en venta al html
-addEstatesToHtml(saleEstates, saleEstatesContainer, 3);
+// Se añaden las ultimas 3 propiedades en venta al html si existe el contenedor
+homeSaleEstatesContainer &&
+  addEstatesToHtml(saleEstates, homeSaleEstatesContainer, 3);
 
-// Se añaden las ultimas 3 propiedades en arriendo al html
-addEstatesToHtml(rentalEstates, rentalEstatesContainer, 3);
+// Se añaden las ultimas 3 propiedades en arriendo al html si existe el contenedor
+homeRentalEstatesContainer &&
+  addEstatesToHtml(rentalEstates, homeRentalEstatesContainer, 3);
+
+// PÁGINA PROPIEDADES EN VENTA
+// Se obtienen los elementos del DOM
+const ventaSaleEstatesContainer = document.getElementById(
+  'propiedades-venta-container-all'
+);
+// Se añaden todas las propiedades en venta al html de la pagina de propiedades en venta
+addEstatesToHtml(saleEstates, ventaSaleEstatesContainer);
