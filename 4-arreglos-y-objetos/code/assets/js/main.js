@@ -163,5 +163,6 @@ homeRentalEstatesContainer &&
 const ventaSaleEstatesContainer = document.getElementById(
   'propiedades-venta-container-all'
 );
-// Se añaden todas las propiedades en venta al html de la pagina de propiedades en venta
-addEstatesToHtml(saleEstates, ventaSaleEstatesContainer);
+// Se añaden todas las propiedades en venta al html de la pagina de propiedades en venta si existe el contenedor
+ventaSaleEstatesContainer &&
+  addEstatesToHtml(saleEstates, ventaSaleEstatesContainer);
