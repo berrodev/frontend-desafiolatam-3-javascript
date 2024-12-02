@@ -115,7 +115,7 @@ function addEstatesToHtml(estates, container, amount = estates.length) {
   } of estates.slice(-amount)) {
     container.innerHTML += `
           <div class="col-md-4 mb-4">
-              <div class="card">
+              <div class="card h-100">
                 <img
                   src="${src}"
                   class="card-img-top"
