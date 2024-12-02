@@ -135,14 +135,18 @@ function addEstatesToHtml(estates, container, amount = estates.length) {
                     <i class="fas fa-bed"></i> ${rooms} Habitaciones
                   </p>
                   <p><i class="fas fa-dollar-sign"></i> ${price.toLocaleString()}</p>
-                  <p class="${smoke ? 'text-danger' : 'text-success'}">
-                    <i class="fas fa-smoking-ban"></i> ${
-                      smoke ? 'Se permite fumar' : 'No se permite fumar'
-                    }
+                  <p class="${smoke ? 'text-success' : 'text-danger'}">
+                     ${
+                       smoke
+                         ? '<i class="fa-solid fa-smoking"></i> Se permite fumar'
+                         : '<i class="fas fa-smoking-ban"></i> No se permite fumar'
+                     }
                   </p>
                   <p class="${pets ? 'text-success' : 'text-danger'}">
-                    <i class="fas fa-ban"></i> ${
-                      pets ? 'Mascotas permitidas' : 'No se permiten mascotas'
+                    ${
+                      pets
+                        ? '<i class="fa-solid fa-paw"></i> Mascotas permitidas'
+                        : '<i class="fas fa-ban"></i> No se permiten mascotas'
                     }
                   </p>
                 </div>
