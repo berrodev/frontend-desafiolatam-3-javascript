@@ -62,15 +62,15 @@ const showTasks = () => {
 // Mostrar las tareas en el DOM
 showTasks();
 
-// Agregar tarea, generando un nuevo id
-const addTask = (task) => {
-  DUMMY_TASKS.push({
-    id: DUMMY_TASKS.length + 1,
-    task,
-    completed: false,
-  });
-  showTasks();
-};
+// Agregar tarea desde el formulario add-task-form al hacer click al boton add-task, generando un nuevo id y prevención de recarga de la página
+
+// Elemento formulario
+const addTaskForm = document.getElementById('add-task-form');
+addTaskForm.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const newTaskText = event.target['new-task'].value;
+  console.log(newTaskText);
+});
 
 // Marcar tarea como completada
 const markTaskAsCompleted = (taskId) => {
