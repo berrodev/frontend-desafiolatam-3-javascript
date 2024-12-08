@@ -23,9 +23,9 @@
               type="text"
               id="new-task"
               class="form-control me-2"
-              placeholder="Nueva tarea"
+              placeholder="New Task"
             />
-            <button id="add-task" class="btn btn-primary">Agregar</button>
+            <button id="add-task" class="btn btn-primary">Add Task</button>
           </div>
 
           <!-- Contadores -->
@@ -34,7 +34,7 @@
               Total: <span id="total-count" class="fw-bold">0</span>
             </p>
             <p class="mb-0">
-              Realizadas: <span id="completed-count" class="fw-bold">0</span>
+              Done: <span id="completed-count" class="fw-bold">0</span>
             </p>
           </div>
 
@@ -44,11 +44,29 @@
               <thead class="table-dark">
                 <tr>
                   <th scope="col">ID</th>
-                  <th scope="col">Tarea</th>
+                  <th scope="col">Taks</th>
+                  <th scope="col">Done</th>
+                  <th scope="col">Delete</th>
                 </tr>
               </thead>
               <tbody id="task-list">
                 <!-- Aquí se agregarán las tareas dinámicamente -->
+                <tr>
+                  <td>1</td>
+                  <td>Limpiar la cocina</td>
+                  <td>
+                    <input
+                      type="checkbox"
+                      class="form-check-input mark-completed"
+                      checked
+                    />
+                  </td>
+                  <td>
+                    <button class="btn btn-danger btn-sm delete-task">
+                      Eliminar
+                    </button>
+                  </td>
+                </tr>
               </tbody>
             </table>
           </div>
