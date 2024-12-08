@@ -1,5 +1,3 @@
-console.log('js is linked');
-
 // Array de tareas
 const DUMMY_TASKS = [
   {
@@ -29,8 +27,9 @@ const DUMMY_TASKS = [
   },
 ];
 
-// Función para mostrar las tareas en el DOM
+// Función para mostrar las tareas en el DOM. Renderiza los elementos de DUMMY_TASKS actualizados
 const showTasks = () => {
+  console.log(DUMMY_TASKS);
   // Elemento donde se mostrarán las tareas
   const tasksList = document.getElementById('tasks-list');
   tasksList.innerHTML = '';
@@ -69,7 +68,13 @@ const addTaskForm = document.getElementById('add-task-form');
 addTaskForm.addEventListener('submit', (event) => {
   event.preventDefault();
   const newTaskText = event.target['new-task'].value;
-  console.log(newTaskText);
+  const newTask = {
+    id: DUMMY_TASKS.length + 1,
+    task: newTaskText,
+    completed: false,
+  };
+  DUMMY_TASKS.push(newTask);
+  showTasks();
 });
 
 // Marcar tarea como completada
