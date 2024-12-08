@@ -95,6 +95,8 @@ addTaskForm.addEventListener('submit', (event) => {
     completed: false,
   };
   DUMMY_TASKS.push(newTask);
+  // Limpiar el formulario
+  addTaskForm.reset();
   render();
 });
 
