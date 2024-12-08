@@ -1,4 +1,4 @@
-// Array de tareas
+// Array de tareas DUMMY
 const DUMMY_TASKS = [
   {
     id: 1,
@@ -27,14 +27,17 @@ const DUMMY_TASKS = [
   },
 ];
 
-// Función para mostrar las tareas en el DOM. Renderiza los elementos de DUMMY_TASKS actualizados
-const showTasks = () => {
-  console.log(DUMMY_TASKS);
-  // Elemento donde se mostrarán las tareas
-  const tasksList = document.getElementById('tasks-list');
-  tasksList.innerHTML = '';
-  DUMMY_TASKS.forEach((task) => {
-    tasksList.innerHTML += `
+// Elementos del DOM
+const tasksList = document.getElementById('tasks-list');
+const completedTasksCounter = document.getElementById('completed-count');
+const totalTasksCounter = document.getElementById('total-count');
+const addTaskForm = document.getElementById('add-task-form');
+
+// Función para mostrar las tareas en el DOM
+const showTaskList = () => {
+  tasksList.innerHTML = DUMMY_TASKS.map((task) => {
+    return `
+        <tr>
       <td>${task.id}</td>
       <td class='${task.completed && 'text-decoration-line-through'}'>${
       task.task
@@ -54,39 +57,57 @@ const showTasks = () => {
           Eliminar
         </button>
       </td>
+    </tr>
     `;
-  });
+  }).join('');
+};
+
+// Función para mostrar los contadores actualizados
+const showCounters = () => {
+  const completedTasks = DUMMY_TASKS.filter((task) => task.completed);
+  completedTasksCounter.textContent = completedTasks.length;
+  const allTasks = DUMMY_TASKS.length;
+  totalTasksCounter.textContent = allTasks;
+};
+
+// Función para renderizar los elementos en el DOM
+const render = () => {
+  // Actualizar listado de tareas
+  showTaskList();
+
+  // Actualizar contadores
+  showCounters();
 };
 
 // Mostrar las tareas en el DOM
-showTasks();
+render();
 
-// Agregar tarea desde el formulario add-task-form al hacer click al boton add-task, generando un nuevo id y prevención de recarga de la página
-
-// Elemento formulario
-const addTaskForm = document.getElementById('add-task-form');
+// Event listener para el formulario de agregar tarea
 addTaskForm.addEventListener('submit', (event) => {
   event.preventDefault();
   const newTaskText = event.target['new-task'].value;
+  if (!newTaskText || newTaskText.trim() === '') {
+    return;
+  }
   const newTask = {
     id: DUMMY_TASKS.length + 1,
     task: newTaskText,
     completed: false,
   };
   DUMMY_TASKS.push(newTask);
-  showTasks();
+  render();
 });
 
-// Marcar tarea como completada
+// Función para marcar tarea como completada
 const markTaskAsCompleted = (taskId) => {
   const task = DUMMY_TASKS.find((task) => task.id === taskId);
   task.completed = !task.completed;
-  showTasks();
+  render();
 };
 
-// Eliminar tarea
+// Función para eliminar tarea
 const deleteTask = (taskId) => {
   const taskIndex = DUMMY_TASKS.findIndex((task) => task.id === taskId);
   DUMMY_TASKS.splice(taskIndex, 1);
-  showTasks();
+  render();
 };
